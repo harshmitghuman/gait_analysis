@@ -12,26 +12,24 @@
         <meta name="author" content="Harshmit Ghuman">
       
       
-        <link rel="canonical" href="https://harshmitghuman.github.io/gait_analysis/">
+        <link rel="canonical" href="https://harshmitghuman.github.io/gait_analysis/video_preprocessing/">
       
       
-      
-        <link rel="next" href="introduction/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
-        <title>Human Gait Analysis Blog</title>
+        <title>Video preprocessing - Human Gait Analysis Blog</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -50,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,11 +65,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#human-gait-analysis-blog" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +77,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Human Gait Analysis Blog" class="md-header__button md-logo" aria-label="Human Gait Analysis Blog" data-md-component="logo">
+    <a href=".." title="Human Gait Analysis Blog" class="md-header__button md-logo" aria-label="Human Gait Analysis Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Video preprocessing
             
           </span>
         </div>
@@ -182,7 +175,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Human Gait Analysis Blog" class="md-nav__button md-logo" aria-label="Human Gait Analysis Blog" data-md-component="logo">
+    <a href=".." title="Human Gait Analysis Blog" class="md-nav__button md-logo" aria-label="Human Gait Analysis Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -197,19 +190,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -225,7 +209,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -237,7 +220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   
@@ -274,8 +257,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -292,9 +273,112 @@
 
 
 
-<h1 id="human-gait-analysis-blog">Human Gait Analysis Blog</h1>
-<p>Welcome to our documentation of a computer vision–based gait analysis system.</p>
-<p>Use the sidebar to explore our journey.</p>
+  <h1>Video preprocessing</h1>
+
+<p>Video Preprocessing for Human Gait Analysis
+Multi-Stage Dashboard Visualization</p>
+<p>In this blog, I present the complete preprocessing pipeline used in my Human Gait Analysis project.</p>
+<p>Instead of producing a single output, the system generates four synchronized video streams, displayed together in a structured dashboard format. Each stream represents a different stage of transformation — from raw video input to a clean human silhouette.</p>
+<p>This multi-view visualization makes the preprocessing pipeline transparent, interpretable, and easy to debug.</p>
+<p>Overview: Four-Panel Dashboard Output</p>
+<p>The system simultaneously displays:</p>
+<p>Original Frame with ROI Detection (Green Bounding Boxes)</p>
+<p>Grayscale / Contrast Enhanced Frame</p>
+<p>Binary Silhouette (Foreground Mask)</p>
+<p>Final Foreground Overlay (Red Mask on Original Frame)</p>
+<p>Each output reflects a specific stage in the preprocessing pipeline.</p>
+<p>1️⃣ Original Video with ROI Detection</p>
+<p>This panel shows the raw frame with detected regions highlighted using green bounding boxes.</p>
+<p>How Are the Bounding Boxes Generated?</p>
+<p>The process follows classical computer vision segmentation:</p>
+<p>Frame differencing (background subtraction)</p>
+<p>Binary thresholding</p>
+<p>Contour detection</p>
+<p>Selection of significant contour (human subject)</p>
+<p>Bounding rectangle extraction</p>
+<p>This technique is known as:</p>
+<p>Foreground Segmentation + Contour-Based Bounding Box Detection</p>
+<p>Purpose</p>
+<p>Identifies the walking subject</p>
+<p>Tracks motion region dynamically</p>
+<p>Removes irrelevant background information</p>
+<p>Defines Region of Interest (ROI) for further analysis</p>
+<p>This step ensures that only meaningful motion is considered for gait extraction.</p>
+<p>2️⃣ Grayscale / Contrast Enhanced Frame</p>
+<p>The second panel displays the grayscale representation of the frame.</p>
+<p>In some cases, histogram equalization is applied to enhance contrast.</p>
+<p>Why Convert to Grayscale?</p>
+<p>Reduces computational complexity</p>
+<p>Removes color dependency</p>
+<p>Focuses only on intensity variation</p>
+<p>Improves motion detection stability</p>
+<p>Grayscale conversion prepares the frame for reliable background subtraction and thresholding.</p>
+<p>Contrast enhancement ensures robustness under variable lighting conditions.</p>
+<p>3️⃣ Binary Silhouette (Black Background)</p>
+<p>This is the most critical output in the preprocessing pipeline.</p>
+<p>The frame is converted into a binary mask where:</p>
+<p>White pixels represent the human subject</p>
+<p>Black pixels represent the background</p>
+<p>Processing Steps</p>
+<p>Background subtraction (frame differencing)</p>
+<p>Thresholding</p>
+<p>Morphological opening (removes small noise)</p>
+<p>Morphological closing (fills small gaps)</p>
+<p>Elliptical or rectangular structuring elements are used to preserve natural human shape.</p>
+<p>Why This Step Is Important</p>
+<p>The silhouette isolates the human body and removes texture, clothing details, and background clutter.</p>
+<p>This creates a clean representation suitable for:</p>
+<p>Feature extraction</p>
+<p>Gait cycle detection</p>
+<p>Shape-based analysis</p>
+<p>4️⃣ Final Foreground Overlay (Red Mask)</p>
+<p>The fourth panel overlays detected foreground regions on the original frame using a red mask.</p>
+<p>Purpose of Overlay</p>
+<p>Visually confirms correct segmentation</p>
+<p>Detects misclassification errors</p>
+<p>Validates contour alignment</p>
+<p>Ensures preprocessing consistency</p>
+<p>This step acts as a debugging and validation layer for the entire pipeline.</p>
+<p>Why Use a 4-Panel Dashboard?</p>
+<p>Instead of presenting only the final silhouette, the dashboard:</p>
+<p>Demonstrates the full transformation process</p>
+<p>Improves interpretability</p>
+<p>Makes debugging easier</p>
+<p>Enhances academic presentation clarity</p>
+<p>Supports viva explanations effectively</p>
+<p>It proves that preprocessing is systematic and stage-driven — not arbitrary.</p>
+<p>Techniques Used in the Pipeline</p>
+<p>This implementation relies entirely on classical computer vision methods:</p>
+<p>Frame resizing</p>
+<p>Grayscale conversion</p>
+<p>Histogram equalization</p>
+<p>Background subtraction</p>
+<p>Thresholding</p>
+<p>Morphological operations</p>
+<p>Contour detection</p>
+<p>Bounding box extraction</p>
+<p>Mask overlay visualization</p>
+<p>No deep learning-based segmentation is used.</p>
+<p>This keeps the system:</p>
+<p>Lightweight</p>
+<p>Computationally efficient</p>
+<p>Real-time compatible</p>
+<p>Syllabus-aligned</p>
+<p>Conclusion</p>
+<p>The four synchronized outputs clearly demonstrate how raw walking footage transforms into a structured silhouette ready for gait feature extraction.</p>
+<p>Effective preprocessing ensures:</p>
+<p>Noise reduction</p>
+<p>Accurate human isolation</p>
+<p>Stable feature extraction</p>
+<p>Reliable downstream gait recognition</p>
+<p>In the next blog, feature extraction techniques will be explained in detail.</p>
+<p>Built using Material for MkDocs</p>
+<p>If you want, I can:</p>
+<p>Make it more research-paper style</p>
+<p>Add pipeline diagram (ASCII or image)</p>
+<p>Make it more portfolio/LinkedIn friendly</p>
+<p>Simplify it for viva</p>
+<p>Tell me what tone you want.</p>
 
 
 
@@ -344,10 +428,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.expand", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
