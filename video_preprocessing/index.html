@@ -15,6 +15,8 @@
         <link rel="canonical" href="https://harshmitghuman.github.io/gait_analysis/video_preprocessing/">
       
       
+        <link rel="prev" href="../introduction/">
+      
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Video preprocessing - Human Gait Analysis Blog</title>
+        <title>Video Preprocessing - Human Gait Analysis Blog</title>
       
     
     
@@ -65,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#video-preprocessing-for-human-gait-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Video preprocessing
+              Video Preprocessing
             
           </span>
         </div>
@@ -240,6 +247,269 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video Preprocessing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video Preprocessing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multi-stage-dashboard-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MULTI-STAGE DASHBOARD VISUALIZATION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#four-panel-dashboard-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FOUR-PANEL DASHBOARD OVERVIEW
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#original-frame-with-roi-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ORIGINAL FRAME WITH ROI DETECTION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ORIGINAL FRAME WITH ROI DETECTION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-are-the-bounding-boxes-generated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOW ARE THE BOUNDING BOXES GENERATED?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PURPOSE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grayscale-contrast-enhanced-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GRAYSCALE / CONTRAST ENHANCED FRAME
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GRAYSCALE / CONTRAST ENHANCED FRAME">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-convert-to-grayscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WHY CONVERT TO GRAYSCALE?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-silhouette-foreground-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BINARY SILHOUETTE (FOREGROUND MASK)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BINARY SILHOUETTE (FOREGROUND MASK)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROCESSING STEPS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-step-is-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WHY THIS STEP IS IMPORTANT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-foreground-overlay-red-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FINAL FOREGROUND OVERLAY (RED MASK)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FINAL FOREGROUND OVERLAY (RED MASK)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PURPOSE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-a-four-panel-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WHY USE A FOUR-PANEL DASHBOARD?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#techniques-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TECHNIQUES USED
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CONCLUSION
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -257,6 +527,205 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multi-stage-dashboard-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MULTI-STAGE DASHBOARD VISUALIZATION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#four-panel-dashboard-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FOUR-PANEL DASHBOARD OVERVIEW
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#original-frame-with-roi-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ORIGINAL FRAME WITH ROI DETECTION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ORIGINAL FRAME WITH ROI DETECTION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-are-the-bounding-boxes-generated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOW ARE THE BOUNDING BOXES GENERATED?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PURPOSE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grayscale-contrast-enhanced-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GRAYSCALE / CONTRAST ENHANCED FRAME
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GRAYSCALE / CONTRAST ENHANCED FRAME">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-convert-to-grayscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WHY CONVERT TO GRAYSCALE?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-silhouette-foreground-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BINARY SILHOUETTE (FOREGROUND MASK)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BINARY SILHOUETTE (FOREGROUND MASK)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROCESSING STEPS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-step-is-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WHY THIS STEP IS IMPORTANT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-foreground-overlay-red-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FINAL FOREGROUND OVERLAY (RED MASK)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FINAL FOREGROUND OVERLAY (RED MASK)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PURPOSE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-a-four-panel-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WHY USE A FOUR-PANEL DASHBOARD?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#techniques-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TECHNIQUES USED
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CONCLUSION
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -273,112 +742,139 @@
 
 
 
-  <h1>Video preprocessing</h1>
-
-<p>Video Preprocessing for Human Gait Analysis
-Multi-Stage Dashboard Visualization</p>
-<p>In this blog, I present the complete preprocessing pipeline used in my Human Gait Analysis project.</p>
-<p>Instead of producing a single output, the system generates four synchronized video streams, displayed together in a structured dashboard format. Each stream represents a different stage of transformation — from raw video input to a clean human silhouette.</p>
-<p>This multi-view visualization makes the preprocessing pipeline transparent, interpretable, and easy to debug.</p>
-<p>Overview: Four-Panel Dashboard Output</p>
+<h1 id="video-preprocessing-for-human-gait-analysis">VIDEO PREPROCESSING FOR HUMAN GAIT ANALYSIS</h1>
+<h2 id="multi-stage-dashboard-visualization">MULTI-STAGE DASHBOARD VISUALIZATION</h2>
+<p>This blog presents the complete preprocessing pipeline used in my <strong>Human Gait Analysis</strong> project.</p>
+<p>Instead of producing a single output, the system generates <strong>four synchronized video streams</strong>, displayed together in a structured dashboard. Each panel represents a different stage of transformation — from raw input to a clean human silhouette.</p>
+<p>This multi-stage visualization makes the pipeline:</p>
+<ul>
+<li>Transparent</li>
+<li>Interpretable</li>
+<li>Easy to debug</li>
+<li>Academically presentable</li>
+</ul>
+<hr />
+<h2 id="four-panel-dashboard-overview">FOUR-PANEL DASHBOARD OVERVIEW</h2>
 <p>The system simultaneously displays:</p>
-<p>Original Frame with ROI Detection (Green Bounding Boxes)</p>
-<p>Grayscale / Contrast Enhanced Frame</p>
-<p>Binary Silhouette (Foreground Mask)</p>
-<p>Final Foreground Overlay (Red Mask on Original Frame)</p>
-<p>Each output reflects a specific stage in the preprocessing pipeline.</p>
-<p>1️⃣ Original Video with ROI Detection</p>
-<p>This panel shows the raw frame with detected regions highlighted using green bounding boxes.</p>
-<p>How Are the Bounding Boxes Generated?</p>
-<p>The process follows classical computer vision segmentation:</p>
-<p>Frame differencing (background subtraction)</p>
-<p>Binary thresholding</p>
-<p>Contour detection</p>
-<p>Selection of significant contour (human subject)</p>
-<p>Bounding rectangle extraction</p>
-<p>This technique is known as:</p>
-<p>Foreground Segmentation + Contour-Based Bounding Box Detection</p>
-<p>Purpose</p>
-<p>Identifies the walking subject</p>
-<p>Tracks motion region dynamically</p>
-<p>Removes irrelevant background information</p>
-<p>Defines Region of Interest (ROI) for further analysis</p>
-<p>This step ensures that only meaningful motion is considered for gait extraction.</p>
-<p>2️⃣ Grayscale / Contrast Enhanced Frame</p>
-<p>The second panel displays the grayscale representation of the frame.</p>
-<p>In some cases, histogram equalization is applied to enhance contrast.</p>
-<p>Why Convert to Grayscale?</p>
-<p>Reduces computational complexity</p>
-<p>Removes color dependency</p>
-<p>Focuses only on intensity variation</p>
-<p>Improves motion detection stability</p>
-<p>Grayscale conversion prepares the frame for reliable background subtraction and thresholding.</p>
-<p>Contrast enhancement ensures robustness under variable lighting conditions.</p>
-<p>3️⃣ Binary Silhouette (Black Background)</p>
-<p>This is the most critical output in the preprocessing pipeline.</p>
+<ol>
+<li>Original Frame with ROI Detection (Green Bounding Boxes)</li>
+<li>Grayscale / Contrast Enhanced Frame</li>
+<li>Binary Silhouette (Foreground Mask)</li>
+<li>Final Foreground Overlay (Red Mask on Original Frame)</li>
+</ol>
+<p>Each panel reflects a specific preprocessing stage.</p>
+<hr />
+<h2 id="original-frame-with-roi-detection">ORIGINAL FRAME WITH ROI DETECTION</h2>
+<p>This panel shows the raw frame with detected motion regions highlighted using green bounding boxes.</p>
+<h3 id="how-are-the-bounding-boxes-generated">HOW ARE THE BOUNDING BOXES GENERATED?</h3>
+<p>The pipeline follows classical computer vision segmentation:</p>
+<ul>
+<li>Frame differencing (background subtraction)</li>
+<li>Binary thresholding</li>
+<li>Contour detection</li>
+<li>Selection of significant contour (human subject)</li>
+<li>Bounding rectangle extraction</li>
+</ul>
+<p>This method is known as:</p>
+<p><strong>FOREGROUND SEGMENTATION + CONTOUR-BASED BOUNDING BOX DETECTION</strong></p>
+<h3 id="purpose">PURPOSE</h3>
+<ul>
+<li>Identifies the walking subject</li>
+<li>Tracks motion dynamically</li>
+<li>Removes irrelevant background information</li>
+<li>Defines the Region of Interest (ROI)</li>
+</ul>
+<p>This ensures that only meaningful motion contributes to gait analysis.</p>
+<hr />
+<h2 id="grayscale-contrast-enhanced-frame">GRAYSCALE / CONTRAST ENHANCED FRAME</h2>
+<p>This panel displays the grayscale version of the frame. In low-light or uneven illumination conditions, histogram equalization is applied to enhance contrast.</p>
+<h3 id="why-convert-to-grayscale">WHY CONVERT TO GRAYSCALE?</h3>
+<ul>
+<li>Reduces computational complexity</li>
+<li>Removes color dependency</li>
+<li>Focuses on intensity variation</li>
+<li>Improves motion detection stability</li>
+</ul>
+<p>Grayscale conversion prepares the frame for reliable background subtraction and thresholding. Contrast enhancement improves robustness under variable lighting conditions.</p>
+<hr />
+<h2 id="binary-silhouette-foreground-mask">BINARY SILHOUETTE (FOREGROUND MASK)</h2>
+<p>This is the most critical preprocessing output.</p>
 <p>The frame is converted into a binary mask where:</p>
-<p>White pixels represent the human subject</p>
-<p>Black pixels represent the background</p>
-<p>Processing Steps</p>
-<p>Background subtraction (frame differencing)</p>
-<p>Thresholding</p>
-<p>Morphological opening (removes small noise)</p>
-<p>Morphological closing (fills small gaps)</p>
-<p>Elliptical or rectangular structuring elements are used to preserve natural human shape.</p>
-<p>Why This Step Is Important</p>
-<p>The silhouette isolates the human body and removes texture, clothing details, and background clutter.</p>
-<p>This creates a clean representation suitable for:</p>
-<p>Feature extraction</p>
-<p>Gait cycle detection</p>
-<p>Shape-based analysis</p>
-<p>4️⃣ Final Foreground Overlay (Red Mask)</p>
-<p>The fourth panel overlays detected foreground regions on the original frame using a red mask.</p>
-<p>Purpose of Overlay</p>
-<p>Visually confirms correct segmentation</p>
-<p>Detects misclassification errors</p>
-<p>Validates contour alignment</p>
-<p>Ensures preprocessing consistency</p>
-<p>This step acts as a debugging and validation layer for the entire pipeline.</p>
-<p>Why Use a 4-Panel Dashboard?</p>
-<p>Instead of presenting only the final silhouette, the dashboard:</p>
-<p>Demonstrates the full transformation process</p>
-<p>Improves interpretability</p>
-<p>Makes debugging easier</p>
-<p>Enhances academic presentation clarity</p>
-<p>Supports viva explanations effectively</p>
-<p>It proves that preprocessing is systematic and stage-driven — not arbitrary.</p>
-<p>Techniques Used in the Pipeline</p>
+<ul>
+<li>White pixels represent the human subject</li>
+<li>Black pixels represent the background</li>
+</ul>
+<h3 id="processing-steps">PROCESSING STEPS</h3>
+<ul>
+<li>Background subtraction (frame differencing)</li>
+<li>Thresholding</li>
+<li>Morphological opening (removes small noise)</li>
+<li>Morphological closing (fills small gaps)</li>
+</ul>
+<p>Elliptical or rectangular structuring elements are used to preserve the natural human body structure.</p>
+<h3 id="why-this-step-is-important">WHY THIS STEP IS IMPORTANT</h3>
+<p>The silhouette removes texture, clothing details, and background clutter, leaving a clean shape representation suitable for:</p>
+<ul>
+<li>Feature extraction</li>
+<li>Gait cycle detection</li>
+<li>Shape-based analysis</li>
+</ul>
+<p>This representation forms the foundation for reliable gait recognition.</p>
+<hr />
+<h2 id="final-foreground-overlay-red-mask">FINAL FOREGROUND OVERLAY (RED MASK)</h2>
+<p>The final panel overlays detected foreground regions onto the original frame using a red mask.</p>
+<h3 id="purpose_1">PURPOSE</h3>
+<ul>
+<li>Visually confirms correct segmentation</li>
+<li>Detects misclassification errors</li>
+<li>Validates contour alignment</li>
+<li>Ensures preprocessing consistency</li>
+</ul>
+<p>This acts as a visual validation layer for the entire pipeline.</p>
+<hr />
+<h2 id="why-use-a-four-panel-dashboard">WHY USE A FOUR-PANEL DASHBOARD?</h2>
+<p>Instead of showing only the final silhouette, the dashboard:</p>
+<ul>
+<li>Demonstrates the full transformation process</li>
+<li>Improves interpretability</li>
+<li>Simplifies debugging</li>
+<li>Enhances presentation clarity</li>
+<li>Strengthens viva explanations</li>
+</ul>
+<p>It clearly shows that preprocessing is systematic and stage-driven — not arbitrary.</p>
+<hr />
+<h2 id="techniques-used">TECHNIQUES USED</h2>
 <p>This implementation relies entirely on classical computer vision methods:</p>
-<p>Frame resizing</p>
-<p>Grayscale conversion</p>
-<p>Histogram equalization</p>
-<p>Background subtraction</p>
-<p>Thresholding</p>
-<p>Morphological operations</p>
-<p>Contour detection</p>
-<p>Bounding box extraction</p>
-<p>Mask overlay visualization</p>
-<p>No deep learning-based segmentation is used.</p>
-<p>This keeps the system:</p>
-<p>Lightweight</p>
-<p>Computationally efficient</p>
-<p>Real-time compatible</p>
-<p>Syllabus-aligned</p>
-<p>Conclusion</p>
-<p>The four synchronized outputs clearly demonstrate how raw walking footage transforms into a structured silhouette ready for gait feature extraction.</p>
+<ul>
+<li>Frame resizing</li>
+<li>Grayscale conversion</li>
+<li>Histogram equalization</li>
+<li>Background subtraction</li>
+<li>Thresholding</li>
+<li>Morphological operations</li>
+<li>Contour detection</li>
+<li>Bounding box extraction</li>
+<li>Mask overlay visualization</li>
+</ul>
+<p>No deep learning–based segmentation is used.</p>
+<p>This makes the system:</p>
+<ul>
+<li>Lightweight</li>
+<li>Computationally efficient</li>
+<li>Real-time compatible</li>
+<li>Syllabus-aligned</li>
+</ul>
+<hr />
+<h2 id="conclusion">CONCLUSION</h2>
+<p>The four synchronized outputs demonstrate how raw walking footage is transformed into a structured silhouette ready for gait feature extraction.</p>
 <p>Effective preprocessing ensures:</p>
-<p>Noise reduction</p>
-<p>Accurate human isolation</p>
-<p>Stable feature extraction</p>
-<p>Reliable downstream gait recognition</p>
-<p>In the next blog, feature extraction techniques will be explained in detail.</p>
-<p>Built using Material for MkDocs</p>
-<p>If you want, I can:</p>
-<p>Make it more research-paper style</p>
-<p>Add pipeline diagram (ASCII or image)</p>
-<p>Make it more portfolio/LinkedIn friendly</p>
-<p>Simplify it for viva</p>
-<p>Tell me what tone you want.</p>
+<ul>
+<li>Noise reduction</li>
+<li>Accurate human isolation</li>
+<li>Stable feature extraction</li>
+<li>Reliable downstream gait recognition</li>
+</ul>
+<p>In the next blog, feature extraction techniques will be discussed in detail.</p>
 
 
 
